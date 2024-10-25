@@ -66,9 +66,11 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     if (providers.gradleProperty("enable.local.debug").get().toBoolean()) {
+        println("enable.local.debug = true")
         implementation(project(":module_my"))
     } else {
-        implementation(libs.modules.my)
+        println("enable.local.debug = false")
+        implementation(libs.module.my)
     }
     kapt(libs.arouter.compiler)
 }
