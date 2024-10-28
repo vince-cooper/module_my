@@ -16,6 +16,7 @@ kapt {
 android {
     namespace = "com.wangwh.modules.my"
     compileSdk = libs.versions.compileSdk.get().toInt()
+    resourcePrefix = "module_my_"
 
     defaultConfig {
         minSdk = libs.versions.minSdk.get().toInt()
